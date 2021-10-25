@@ -1,6 +1,7 @@
 
 public class Ascensor {
     int posAscensor=1;
+
     public int CrearPersona()throws  Exception{
         int aleatorio=(int)Math.random()*2+1;
         int aleatorio2=(int)Math.random()*2+1;

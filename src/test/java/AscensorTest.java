@@ -33,4 +33,14 @@ public class AscensorTest {
         assertTrue(resultado>=1&&resultado<4);
     }
 
+    @Test
+    public void crearPersona()throws Exception{
+        //1. Preparacion de la prueba
+        Ascensor asc = new Ascensor();
+        //2. Logica de la prueba
+        int resultado = asc.CrearPersona();
+        //3. Verificacion o assert
+        assertTrue(resultado>=1&&resultado<4);
+    }
+
 }
