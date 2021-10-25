@@ -12,15 +12,25 @@ public class AscensorTest {
         //3. Verificacion o assert
         assertEquals(1,resultado);
     }
-    //check
+
+//    @Test
+//    public void siNoInicioDia()throws Exception{
+//        //1. Preparacion de la prueba
+//        Ascensor asc = new Ascensor();
+//        //2. Logica de la prueba
+//        int resultado = asc.posInicial(false);
+//        //3. Verificacion o assert
+//        assertTrue(resultado!=1);
+//    }
+
     @Test
-    public void siNoInicioDia()throws Exception{
+    public void crearPersona()throws Exception{
         //1. Preparacion de la prueba
         Ascensor asc = new Ascensor();
         //2. Logica de la prueba
-        int resultado = asc.posInicial(false);
+        int resultado = asc.CrearPersona();
         //3. Verificacion o assert
-        assertEquals(2,resultado);
+        assertTrue(resultado>=1&&resultado<4);
     }
 
 }
