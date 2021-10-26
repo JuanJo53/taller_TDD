@@ -11,7 +11,7 @@ public class AscensorTest {
         int resultado = asc.posInicial(true);
         //3. Verificacion o assert
         assertEquals(1,resultado);
-        assertEquals(if(asc.posAscensor==1){"jdslf"}else{"hfls"},resultado);
+//        assertEquals(if(asc.posAscensor==1){"jdslf"}else{"hfls"},resultado);
     }
 
 //    @Test
@@ -45,5 +45,58 @@ public class AscensorTest {
         assertEquals("EL ascensor ya va en camino", asc.llamarAscensor(2,3));
         assertEquals("EL ascensor ya se encuentra en ese piso", asc.llamarAscensor(3,3));
     }
+
+    @Test
+    public void verificarSiDestinoEsValido()throws Exception{
+        //1. Preparacion de la prueba
+        Ascensor asc = new Ascensor();
+        //2. Logica de la prueba
+//        String resultado = asc.verificarDestino(0);
+        //3. Verificacion o assert
+        assertEquals("El piso al que desea ir no es valido",asc.verificarDestino(0));
+        assertEquals("El piso al que desea ir no es valido",asc.verificarDestino(4));
+//        assertEquals(if(asc.posAscensor==1){"jdslf"}else{"hfls"},resultado);
+    }
+
+    @Test
+    public void verificarSiDestinoEsElMismoPisoUno()throws Exception{
+        //1. Preparacion de la prueba
+        Ascensor asc = new Ascensor();
+        //2. Logica de la prueba
+        //3. Verificacion o assert
+        if(asc.posAscensor==1){
+            assertEquals("El piso al que desea ir no es valido", asc.verificarDestino(1));
+        }else{
+            assertEquals("El ascensor ya va en camino", asc.verificarDestino(1));
+        }
+    }
+
+    @Test
+    public void verificarSiDestinoEsElMismoPisoDos()throws Exception{
+        //1. Preparacion de la prueba
+        Ascensor asc = new Ascensor();
+        //2. Logica de la prueba
+        //3. Verificacion o assert
+        if(asc.posAscensor==2){
+            assertEquals("El piso al que desea ir no es valido", asc.verificarDestino(2));
+        }else{
+            assertEquals("El ascensor ya va en camino", asc.verificarDestino(2));
+        }
+    }
+
+    @Test
+    public void verificarSiDestinoEsElMismoPisoTres()throws Exception{
+        //1. Preparacion de la prueba
+        Ascensor asc = new Ascensor();
+        //2. Logica de la prueba
+        //3. Verificacion o assert
+        if(asc.posAscensor==3){
+            assertEquals("El piso al que desea ir no es valido", asc.verificarDestino(3));
+        }else{
+            assertEquals("El ascensor ya va en camino", asc.verificarDestino(3));
+        }
+    }
+
+
 
 }
