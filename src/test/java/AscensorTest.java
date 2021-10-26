@@ -14,10 +14,11 @@ public class AscensorTest {
         asc=new Ascensor();
     }
     @Test
-    public void siInicioDia()throws Exception{
+    public void verificarInicioDia()throws Exception{
 //        Ascensor asc = new Ascensor();
-        int resultado = asc.posInicial(true);
-        assertEquals(1,resultado);
+        assertEquals(1,asc.posInicial(true));
+        assertEquals(asc.posAscensor,asc.posInicial(false));
+
     }
 
     @Test

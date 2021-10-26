@@ -26,7 +26,7 @@ public class Ascensor {
         }
     }
 
-    private void cambiarPiso(int piso){
+    public void cambiarPiso(int piso){
         posAscensor=piso;
     }
 
