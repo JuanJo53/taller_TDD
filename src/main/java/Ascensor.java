@@ -23,13 +23,16 @@ public class Ascensor {
             return posAscensor;
         }
     }
-    public String llamarAscensor(int piso){
-        if(piso==posAscensor){
+    public String llamarAscensor(int posActAscensor, int piso){
+        if(piso==posActAscensor){
             return "EL ascensor ya se encuentra en ese piso";
         }else{
-            posAscensor=piso;
+            cambiarPiso(piso);
             return "EL ascensor ya va en camino";
         }
+    }
+    private void cambiarPiso(int piso){
+        posAscensor=piso;
     }
     public String verificarDestino(int piso){
         if(piso==posAscensor || piso<1 || piso>3){
