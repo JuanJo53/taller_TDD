@@ -6,17 +6,9 @@ public class Ascensor {
 
     public int CrearPersona()throws  Exception{
         int aleatorio=(int)Math.random()*2+1;
-
-        int aleatorio2=(int)Math.random()*2+1;
-
-        System.out.println(aleatorio);
         return aleatorio;
     }
-    public int DestinoPersona(int aleatorio)throws  Exception{
-        int aleatorio2=(int)Math.random()*2+1;
-        if(aleatorio2==aleatorio){aleatorio2=(int)Math.random()*2+1;}
-        return aleatorio2;
-    }
+
     public int posInicial(boolean dia) {
         if(dia){
             posAscensor=1;
@@ -33,14 +25,16 @@ public class Ascensor {
             return "EL ascensor ya va en camino";
         }
     }
+
     private void cambiarPiso(int piso){
         posAscensor=piso;
     }
-    public String verificarDestino(int piso){
-        if(piso==posAscensor || piso<pisoBajo || piso>pisoAlto){
+
+    public String verificarDestino(int destino, int origen){
+        if(destino==origen || destino<pisoBajo || destino>pisoAlto){
             return "El piso al que desea ir no es valido";
         }else{
-            posAscensor=piso;
+            cambiarPiso(destino);
             return "El ascensor ya va en camino";
         }
     }
