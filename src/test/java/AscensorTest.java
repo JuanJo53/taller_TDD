@@ -11,6 +11,7 @@ public class AscensorTest {
         int resultado = asc.posInicial(true);
         //3. Verificacion o assert
         assertEquals(1,resultado);
+        assertEquals(if(asc.posAscensor==1){"jdslf"}else{"hfls"},resultado);
     }
 
 //    @Test
