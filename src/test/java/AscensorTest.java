@@ -31,36 +31,18 @@ public class AscensorTest {
     }
 
     @Test
-    public void verificarDesdePisoUno()throws Exception{
+    public void verificarLlamadaAscensor()throws Exception{
         Ascensor asc = new Ascensor();
 
-        if(asc.posAscensor==1){
-            assertEquals("EL ascensor ya se encuentra en ese piso", asc.llamarAscensor(1));
-        }else{
-            assertEquals("EL ascensor ya va en camino", asc.llamarAscensor(1));
-        }
+        assertEquals("EL ascensor ya se encuentra en ese piso", asc.llamarAscensor(1,1));
+        assertEquals("EL ascensor ya va en camino", asc.llamarAscensor(2,1));
+        assertEquals("EL ascensor ya va en camino", asc.llamarAscensor(3,1));
+        assertEquals("EL ascensor ya va en camino", asc.llamarAscensor(1,2));
+        assertEquals("EL ascensor ya se encuentra en ese piso", asc.llamarAscensor(2,2));
+        assertEquals("EL ascensor ya va en camino", asc.llamarAscensor(3,2));
+        assertEquals("EL ascensor ya va en camino", asc.llamarAscensor(1,3));
+        assertEquals("EL ascensor ya va en camino", asc.llamarAscensor(2,3));
+        assertEquals("EL ascensor ya se encuentra en ese piso", asc.llamarAscensor(3,3));
     }
-    @Test
-    public void verificarDesdePisoDos()throws Exception{
-        Ascensor asc = new Ascensor();
-
-        if(asc.posAscensor==2){
-            assertEquals("EL ascensor ya se encuentra en ese piso", asc.llamarAscensor(2));
-        }else{
-            assertEquals("EL ascensor ya va en camino", asc.llamarAscensor(2));
-        }
-    }
-    @Test
-    public void verificarDesdePisoTres()throws Exception{
-        Ascensor asc = new Ascensor();
-
-        if(asc.posAscensor==3){
-            assertEquals("EL ascensor ya se encuentra en ese piso", asc.llamarAscensor(3));
-        }else{
-            assertEquals("EL ascensor ya va en camino", asc.llamarAscensor(3));
-        }
-    }
-
-
 
 }
