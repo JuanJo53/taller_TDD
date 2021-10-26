@@ -1,6 +1,7 @@
 
 public class Ascensor {
     int posAscensor=1;
+
     public int CrearPersona()throws  Exception{
         int aleatorio=(int)Math.random()*2+1;
 
@@ -27,7 +28,7 @@ public class Ascensor {
             return "EL ascensor ya se encuentra en ese piso";
         }else{
             posAscensor=piso;
-            return "El ascensor ya va en camino";
+            return "EL ascensor ya va en camino";
         }
     }
     public String verificarDestino(int piso){
